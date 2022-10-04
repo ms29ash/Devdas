@@ -19,48 +19,35 @@ function Navbar() {
 export default Navbar;
 
 const Nav = Styled.nav`
-background-color:#000000cb;
+background-color:${(p) => p.theme.color.black};
 display:flex;
 font-weight:bold;
-padding:20px 0px;
 justify-content:space-between;
-/* position: sticky;
-top:0; */
 z-index:100;
 `;
 
 const Img = Styled.img`
-width:100px;
-position: absolute;
-top:2px;
-left:5vw;
+width:150px;
 z-index: 50;
+margin-left:3vw;
 `;
-const NavLinks = Styled.ul`
+const NavLinks = Styled.div`
 color:white;
 display: flex;
-width:60vw;
 margin-left:40vw;
 justify-content: space-around;
 align-items: center;
 `;
 
-const NavLink = Styled.li`
-list-style:none;
+const NavLink = Styled.div`
 cursor: pointer;
-&:hover{
-    color:#fff100;
-}
+margin:0 2rem;
 `;
 
 const Button = Styled(NavLink)`
 color:black;
-background-color:#fff100;
-padding:5px 10px ;
-
-border-radius:9000px;
-&:hover{
-  color:black;
-   cursor:pointer;
-}
+background-color:${(p) => p.theme.color.yellow};
+border-radius:3px;
+padding:0.75rem;
+margin-right:3rem;
 `;

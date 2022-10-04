@@ -5,12 +5,22 @@ function Hero() {
   return (
     <Main>
       <Img src="images/hero.jpg" />
-      <Icons>
-        <IG />
-        <FB />
-        <Yt />
-        <Tw />
-      </Icons>
+      <Wrapper>
+        <Icons>
+          <Icon>
+            <BsInstagram />
+          </Icon>
+          <Icon>
+            <BsFacebook />
+          </Icon>
+          <Icon>
+            <BsYoutube />
+          </Icon>
+          <Icon>
+            <BsTwitter />
+          </Icon>
+        </Icons>
+      </Wrapper>
     </Main>
   );
 }
@@ -18,36 +28,42 @@ function Hero() {
 export default Hero;
 
 const Img = Styled.img`
-    width:100vw;
-    max-height:500px;
+    width:100%;
+    object-fit:cover;
     `;
 const Main = Styled.div`
+width:100vw;
 position:relative;
+overflow-x: hidden;
 `;
 
+const Wrapper = Styled.div`
+  position:absolute;
+top:0;
+bottom:0;
+left:15px; 
+    `;
 const Icons = Styled.div`
-position:absolute;
-bottom:5px;
-left:5vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+
 `;
 
-const IG = Styled(BsInstagram)`
-color:#000;
-font-size:2rem; 
-margin:0 3px
-;`;
-const FB = Styled(BsFacebook)`
-color:#000;
-font-size:2rem; 
-margin:0 3px
-;`;
-const Yt = Styled(BsYoutube)`
-color:#000;
-font-size:2rem; 
-margin:0 3px
-;`;
-const Tw = Styled(BsTwitter)`
-color:#000;
-font-size:2rem; 
-margin:0 3px
-;`;
+const Icon = Styled.div`
+cursor:pointer;
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+&:hover{
+transform:scale(1.2);
+}
+svg{
+  color:${(p) => p.theme.color.black};
+font-size:2.15rem; 
+margin:10px 0;
+}
+
+`;
