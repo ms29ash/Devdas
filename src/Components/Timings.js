@@ -29,7 +29,6 @@ margin:4rem;
 h1{
     margin:2rem 3rem;
     font-size: 2rem;
-/* margin-left:10%; */
 }
 `
 const Container = Styled.div`

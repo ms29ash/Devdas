@@ -42,6 +42,9 @@ align-items: center;
 const NavLink = Styled.div`
 cursor: pointer;
 margin:0 2rem;
+&:hover{
+  color:${(p) => p.theme.color.yellow};
+}
 `;
 
 const Button = Styled(NavLink)`
@@ -50,4 +53,7 @@ background-color:${(p) => p.theme.color.yellow};
 border-radius:3px;
 padding:0.75rem;
 margin-right:3rem;
+&:hover{
+  color:${(p) => p.theme.color.black};
+}
 `;

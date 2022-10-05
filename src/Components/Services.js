@@ -8,6 +8,8 @@ import { MdFastfood } from "react-icons/md";
 function Services() {
   return (
     <Container>
+
+      <h1>What We Offer </h1>
       <Wrapper>
         <Opt>
           <div>
@@ -56,7 +58,15 @@ const Container = Styled.section`
 background:#000;
 max-width:100vw;
 padding:5rem;
-padding-left:20%
+padding-left:20%;
+h1{
+  text-align:center;
+  width:60%;
+  font-size:2rem;
+  margin:0  auto 2rem;
+  margin-right:30%;
+  
+}
 `;
 const Wrapper = Styled.div`
 display:flex;

@@ -23,7 +23,7 @@ export default About
 
 const Container = Styled.div`
 background-color:${p => p.theme.color.black};
-margin:-0.5rem;
+margin: 1rem 0;
 color:white;
 max-width:100vw;
 padding:5vh 10vw;
@@ -54,7 +54,7 @@ h3{
     text-align: center;
     margin-top: 2rem;
     cursor:pointer;
-
+        color:${(p) => p.theme.color.yellow};
 }
 `
 
