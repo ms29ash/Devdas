@@ -28,19 +28,16 @@ function Hero() {
 export default Hero;
 
 const Img = Styled.img`
-    width:100%;
-    object-fit:cover;
+    width:100vw;
     `;
 const Main = Styled.div`
-width:100vw;
 position:relative;
-overflow-x: hidden;
 `;
 
 const Wrapper = Styled.div`
   position:absolute;
 top:0;
-bottom:0;
+bottom:10px;
 left:15px; 
     `;
 const Icons = Styled.div`

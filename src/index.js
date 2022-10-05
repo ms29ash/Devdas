@@ -9,6 +9,7 @@ const theme = {
   color: {
     black: "#0d0d0d",
     yellow: "#f2b807",
+    lightyellow: "#f6c531",
   },
 };
 const root = ReactDOM.createRoot(document.getElementById("root"));
